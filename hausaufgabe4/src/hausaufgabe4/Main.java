@@ -179,7 +179,66 @@ public class Main {
         }
         executor2.shutdown();
         
+        System.out.println(" ");
         
+        List<String> strings= new ArrayList<>();
+        strings.add("");
+        strings.add(" ");
+        strings.add("int");
+        strings.add("123");
+        strings.add("");
+        
+        List<Integer> integers= new ArrayList<>();
+        integers.add(1);
+        integers.add(2);
+        integers.add(5);
+        integers.add(7);
+        integers.add(10);
+        
+        System.out.println("getCountEmptyString");
+        int countEmptyString = JavaStreamsTester.getCountEmptyString(strings);
+        System.out.println(countEmptyString);
+        System.out.println(" ");
+        
+        System.out.println("getCountLength3");
+        int countLength3 = JavaStreamsTester.getCountLength3(strings);
+        System.out.println(countLength3);
+        System.out.println(" ");
+        
+        System.out.println("deleteEmptyStrings");
+        List<String> emptys=JavaStreamsTester.deleteEmpyStrings(strings);
+        emptys.forEach(s -> System.out.println(s));
+        System.out.println(" ");
+        
+        System.out.println("getMergedString");
+        String merged = JavaStreamsTester.getMergedString(strings, ";");
+        System.out.println(merged);
+        System.out.println(" ");
+        
+        System.out.println("getSquares");
+        List<Integer> squares=JavaStreamsTester.getSquares(integers);
+        squares.forEach(s -> System.out.println(s));
+        System.out.println(" ");
+        
+        System.out.println("getMax");
+        int max=JavaStreamsTester.getMax(integers);
+        System.out.println(max);
+        System.out.println(" ");
+        
+        System.out.println("getMin");
+        int min=JavaStreamsTester.getMin(integers);
+        System.out.println(min);
+        System.out.println(" ");
+        
+        System.out.println("getSum");
+        int sum=JavaStreamsTester.getSum(integers);
+        System.out.println(sum);
+        System.out.println(" ");
+        
+        System.out.println("getAverage");
+        int av=JavaStreamsTester.getAverage(integers);
+        System.out.println(av);
+        System.out.println(" ");
     }
     
 }
