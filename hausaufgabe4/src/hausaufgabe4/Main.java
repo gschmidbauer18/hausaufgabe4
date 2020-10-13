@@ -164,7 +164,14 @@ public class Main {
             for (int i = 0; i < futureList.size(); i++) {
                 summe=summe+futureList.get(i).get();
             }
-            System.out.println("Gesamtsumme = "+summe);
+            if(summe==(number*number+number)/2)
+            {
+                System.out.println("Gesamtsumme = "+summe);
+            }
+            else
+            {
+                System.out.println("Falsches Ergebniss");
+            }
         } catch (InterruptedException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ExecutionException ex) {
